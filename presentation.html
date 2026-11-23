@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Project 3: My Personal Website</title>
+<style>
+  :root { --text:#1a1a1a; --muted:#5a5a5a; --line:#d9d9d9; --blue:#1F4E79; }
+  * { box-sizing:border-box; }
+  html, body { height:100%; margin:0; background:#fff; color:var(--text); font-family: Georgia, "Times New Roman", serif; }
+  .slide { display:none; height:100%; padding:5vh 8vw 11vh; flex-direction:column; justify-content:center; }
+  .slide.active { display:flex; }
+  h1 { font-size:clamp(2rem,5vw,3.4rem); color:var(--blue); margin:0 0 12px; }
+  h2 { font-size:clamp(1.5rem,3.4vw,2.2rem); color:var(--blue); margin:0 0 18px; border-bottom:1px solid var(--line); padding-bottom:8px; }
+  p, li { font-size:clamp(1.1rem,2.2vw,1.5rem); line-height:1.5; }
+  ul, ol { padding-left:1.2em; margin:0; }
+  li { margin-bottom:10px; }
+  .sub { color:var(--muted); }
+  code { font-family: Consolas, monospace; background:#f2f2f2; padding:2px 8px; border-radius:3px; font-size:0.9em; }
+  a { color:var(--blue); }
+  .big { font-size:clamp(1.6rem,4vw,2.8rem); }
+  .cite { font-style:italic; font-size:14px; color:var(--muted); line-height:1.4; margin:8px 0 0; }
+  .shot { max-width:100%; max-height:58vh; object-fit:contain; align-self:center; border:1px solid var(--line); }
+  .caption { text-align:center; font-size:15px; color:var(--muted); margin:8px 0 0; }
+  svg { width:100%; max-height:52vh; }
+  svg text { font-family: Arial, Helvetica, sans-serif; }
+  .bar { position:fixed; left:0; right:0; bottom:0; display:flex; justify-content:space-between; align-items:center; padding:10px 8vw; border-top:1px solid var(--line); background:#fff; font-family:Arial,Helvetica,sans-serif; font-size:14px; color:var(--muted); }
+  .bar button { font:inherit; border:1px solid var(--blue); background:#fff; color:var(--blue); padding:6px 16px; cursor:pointer; margin-left:8px; }
+  .bar button:hover { background:var(--blue); color:#fff; }
+</style>
+</head>
+<body>
+
+<section class="slide active">
+  <h1>Project 3: My Personal Website</h1>
+  <p class="sub">Built with Claude Code and published on GitHub</p>
+  <p>Raksmey Thea<br><span class="sub">Chonnam National University</span></p>
+</section>
+
+<section class="slide">
+  <h2>The assignment</h2>
+  <ul>
+    <li>Build my own personal website</li>
+    <li>Upload it to GitHub</li>
+    <li>Present it in class</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2>How it works</h2>
+  <svg viewBox="0 0 900 200" role="img" aria-label="Workflow: Claude Code writes index.html on my computer, git pushes it to a GitHub repository, GitHub Pages publishes it as a live website">
+    <defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1F4E79"/></marker></defs>
+    <g fill="#fff" stroke="#1F4E79" stroke-width="2">
+      <rect x="10" y="50" width="190" height="100" rx="4"/>
+      <rect x="250" y="50" width="190" height="100" rx="4"/>
+      <rect x="490" y="50" width="190" height="100" rx="4"/>
+      <rect x="730" y="50" width="160" height="100" rx="4"/>
+    </g>
+    <g fill="#1a1a1a" font-size="17" text-anchor="middle">
+      <text x="105" y="95" font-weight="bold">My computer</text>
+      <text x="105" y="122" font-size="15">index.html</text>
+      <text x="345" y="95" font-weight="bold">GitHub repository</text>
+      <text x="345" y="122" font-size="15">raksmey198.github.io</text>
+      <text x="585" y="95" font-weight="bold">GitHub Pages</text>
+      <text x="585" y="122" font-size="15">hosts the files</text>
+      <text x="810" y="95" font-weight="bold">Live website</text>
+      <text x="810" y="122" font-size="15">anyone can open</text>
+    </g>
+    <g stroke="#1F4E79" stroke-width="2" marker-end="url(#ar)">
+      <line x1="200" y1="100" x2="248" y2="100"/>
+      <line x1="440" y1="100" x2="488" y2="100"/>
+      <line x1="680" y1="100" x2="728" y2="100"/>
+    </g>
+    <g fill="#5a5a5a" font-size="14" text-anchor="middle">
+      <text x="224" y="40">git push</text>
+      <text x="464" y="40">automatic</text>
+      <text x="704" y="40">published</text>
+      <text x="105" y="180">written with Claude Code</text>
+    </g>
+  </svg>
+</section>
+
+<section class="slide">
+  <h2>Setup steps</h2>
+  <ol>
+    <li>Created a GitHub account (username: raksmey198)</li>
+    <li>Installed Git and the GitHub CLI: <code>winget install</code></li>
+    <li>Signed in from the computer: <code>gh auth login</code>, then authorized in the browser</li>
+    <li>Created the repository and pushed the site</li>
+    <li>Turned on GitHub Pages to get a live link</li>
+  </ol>
+</section>
+
+<section class="slide">
+  <h2>How I put my personal info on the page</h2>
+  <svg viewBox="0 0 900 330" role="img" aria-label="My information on the left becomes sections of the website on the right">
+    <defs><marker id="ar2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1F4E79"/></marker></defs>
+    <g font-size="15" text-anchor="start">
+      <text x="10" y="22" font-weight="bold" fill="#1F4E79">What I gave Claude Code</text>
+      <text x="560" y="22" font-weight="bold" fill="#1F4E79">Section on the website</text>
+    </g>
+    <g fill="#fff" stroke="#1F4E79" stroke-width="1.5">
+      <rect x="10" y="40" width="360" height="40" rx="3"/>
+      <rect x="10" y="95" width="360" height="40" rx="3"/>
+      <rect x="10" y="150" width="360" height="40" rx="3"/>
+      <rect x="10" y="205" width="360" height="40" rx="3"/>
+      <rect x="10" y="260" width="360" height="40" rx="3"/>
+      <rect x="560" y="40" width="330" height="40" rx="3"/>
+      <rect x="560" y="95" width="330" height="40" rx="3"/>
+      <rect x="560" y="150" width="330" height="40" rx="3"/>
+      <rect x="560" y="205" width="330" height="40" rx="3"/>
+      <rect x="560" y="260" width="330" height="40" rx="3"/>
+    </g>
+    <g fill="#1a1a1a" font-size="15" text-anchor="start">
+      <text x="22" y="65">Short bio and education</text>
+      <text x="22" y="120">Research focus (two themes)</text>
+      <text x="22" y="175">Journal paper (DOI link)</text>
+      <text x="22" y="230">Three conference abstracts</text>
+      <text x="22" y="285">Email, ResearchGate, ORCID</text>
+      <text x="572" y="65">About</text>
+      <text x="572" y="120">Research</text>
+      <text x="572" y="175">Journal paper</text>
+      <text x="572" y="230">Conference abstracts</text>
+      <text x="572" y="285">Contact</text>
+    </g>
+    <g stroke="#1F4E79" stroke-width="2" marker-end="url(#ar2)">
+      <line x1="370" y1="60" x2="558" y2="60"/>
+      <line x1="370" y1="115" x2="558" y2="115"/>
+      <line x1="370" y1="170" x2="558" y2="170"/>
+      <line x1="370" y1="225" x2="558" y2="225"/>
+      <line x1="370" y1="280" x2="558" y2="280"/>
+    </g>
+  </svg>
+  <p class="cite">I decide what becomes public. For example, I chose which email address appears on the page.</p>
+</section>
+
+<section class="slide">
+  <h2>The result: my website</h2>
+  <img class="shot" src="img/site-home.png" alt="Top of the personal website showing name, affiliation, About and Research sections">
+  <p class="caption">Top of raksmey198.github.io</p>
+</section>
+
+<section class="slide">
+  <h2>The code on GitHub</h2>
+  <img class="shot" src="img/github-repo.png" alt="GitHub repository page for raksmey198.github.io">
+  <p class="caption">github.com/raksmey198/raksmey198.github.io: one public repository, one commit</p>
+</section>
+
+<section class="slide">
+  <h2>Live website</h2>
+  <p class="big"><a href="https://raksmey198.github.io" target="_blank">raksmey198.github.io</a></p>
+  <p class="sub">Code: github.com/raksmey198/raksmey198.github.io</p>
+  <p>Any edit I push to GitHub updates the site in about a minute.</p>
+</section>
+
+<section class="slide">
+  <h2>What I learned</h2>
+  <ul>
+    <li>A GitHub repository can host a real website for free</li>
+    <li>An AI agent can set up the tools and write the first draft, but I still have to check the content</li>
+    <li>I decide what is public, for example which email appears on the page</li>
+  </ul>
+  <p class="sub">Thank you. Questions?</p>
+</section>
+
+<div class="bar">
+  <span id="count"></span>
+  <span><button id="prev">Previous</button><button id="next">Next</button></span>
+</div>
+
+<script>
+  var slides = document.querySelectorAll('.slide'), i = 0;
+  function show(n) {
+    i = Math.max(0, Math.min(slides.length - 1, n));
+    slides.forEach(function (s, k) { s.classList.toggle('active', k === i); });
+    document.getElementById('count').textContent = (i + 1) + ' / ' + slides.length;
+  }
+  document.getElementById('next').onclick = function () { show(i + 1); };
+  document.getElementById('prev').onclick = function () { show(i - 1); };
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown') { e.preventDefault(); show(i + 1); }
+    if (e.key === 'ArrowLeft' || e.key === 'PageUp') { e.preventDefault(); show(i - 1); }
+    if (e.key === 'Home') show(0);
+    if (e.key === 'End') show(slides.length - 1);
+  });
+  show((parseInt(location.hash.slice(1), 10) || 1) - 1);
+</script>
+</body>
+</html>
