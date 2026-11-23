@@ -21,6 +21,7 @@
   .big { font-size:clamp(1.6rem,4vw,2.8rem); }
   .cite { font-style:italic; font-size:14px; color:var(--muted); line-height:1.4; margin:8px 0 0; }
   .shot { max-width:100%; max-height:58vh; object-fit:contain; align-self:center; border:1px solid var(--line); }
+  .shot.term { max-height:60vh; border:none; }
   .caption { text-align:center; font-size:15px; color:var(--muted); margin:8px 0 0; }
   svg { width:100%; max-height:52vh; }
   svg text { font-family: Arial, Helvetica, sans-serif; }
@@ -87,8 +88,26 @@
     <li>Installed Git and the GitHub CLI: <code>winget install</code></li>
     <li>Signed in from the computer: <code>gh auth login</code>, then authorized in the browser</li>
     <li>Created the repository and pushed the site</li>
-    <li>Turned on GitHub Pages to get a live link</li>
+    <li>GitHub Pages published it automatically, giving a live link</li>
   </ol>
+</section>
+
+<section class="slide">
+  <h2>Steps 1-2: install Git and the GitHub CLI</h2>
+  <img class="shot term" src="img/term-install.png" alt="PowerShell output of git --version and winget install for GitHub CLI">
+  <p class="caption">Git was already installed; the GitHub CLI installed with winget</p>
+</section>
+
+<section class="slide">
+  <h2>Step 3: sign in to GitHub</h2>
+  <img class="shot term" src="img/term-login.png" alt="PowerShell output of gh auth login and gh auth status showing logged in as raksmey198">
+  <p class="caption">After authorizing in the browser, gh auth status shows I am logged in</p>
+</section>
+
+<section class="slide">
+  <h2>Steps 4-5: publish the site</h2>
+  <img class="shot term" src="img/term-publish.png" alt="PowerShell output of git commit and gh repo create creating the repository and pushing">
+  <p class="caption">One command creates the public repository and pushes the code; GitHub Pages does the rest</p>
 </section>
 
 <section class="slide">
